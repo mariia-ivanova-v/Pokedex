@@ -1,20 +1,27 @@
 body{
     font-family: "Yuji Mai", serif;
     margin: 0;
-}/*
-h1{}
-h2{}*/
+}
 h3{
     margin: 0;
 }
+.max-w1920{
+    max-width: 1920px;
+}
 header{
-    padding-left: 100px;
-    padding-right: 100px;
     background-color: aquamarine;
     height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.header-div{
+    padding-left: 100px;
+    padding-right: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex: 1;
 }
 header img{
     width: 100px;
@@ -288,7 +295,7 @@ main{
     h3{
         font-size: 32px;
     }
-    header{
+    .header-div{
         padding-left: 70px;
         padding-right: 70px;
     }
@@ -306,7 +313,7 @@ main{
     .big-container{
         width: 70%;
         left: 15%;
-        top: 20%;
+        top: 10%;
     }
     .cross-container img{
         width: 40px;
@@ -350,7 +357,7 @@ main{
     h3{
         font-size: 30px;
     }
-    header{
+    .header-div{
         padding-left: 50px;
         padding-right: 50px;
     }
@@ -484,7 +491,7 @@ main{
     h3{
         font-size: 20px;
     }
-    header{
+    .header-div{
         padding-left: 35px;
         padding-right: 35px;
     }
@@ -523,6 +530,9 @@ main{
     .single-info{
         width: 80px;
     }
+    .loading img{
+        width: 70px;
+    }
 }
 
 @media(max-width: 380px){
@@ -558,7 +568,7 @@ main{
         width: 60px;
         height: 60px;
     }
-    header{
+    .header-div{
         padding-left: 25px;
         padding-right: 25px;
     }
