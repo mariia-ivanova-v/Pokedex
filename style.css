@@ -1,6 +1,9 @@
 body{
     font-family: "Yuji Mai", serif;
     margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 h3{
     margin: 0;
@@ -14,6 +17,9 @@ header{
     width: 100%;
     display: flex;
     justify-content: center;
+}
+header button{
+    cursor: pointer;
 }
 .header-div{
     padding-left: 100px;
@@ -48,6 +54,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-grow: 1;
 }
 .my-main{
     height: 100vh;
