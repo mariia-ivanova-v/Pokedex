@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="shortcut icon" href="./img/Pokeball.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Yuji+Mai&display=swap" rel="stylesheet">
+</head>
+<body id="my-body" onload="getArray()">
+    
+    <div onclick="closePokemonInfo()" class="background-big-container d-none" id="background-big-container"></div>
+    <header>
+        <img src="./img/Pokeball.png" alt="">
+        <div>
+            <input id="poke-input" type="text" placeholder="Pokemon name or Id">
+            <button onclick="findPokemon()">Find</button>
+        </div>
+    </header>
+    <main id="my-main">
+        <div class="pokemon-container" id="pokemon-container"></div>
+        <div id="search-cards"></div>
+        <div class="big-container d-none" id="big-container">
+            <div class="cross-container">
+                <img id="cross" onclick="closePokemonInfo()" src="./img/cross.png">
+            </div>
+            <div class="container-head" id="container-head">
+            </div>
+            <div class="arrow-container" id="arrow-container"></div>
+            <div class="info-container">
+                <div class="buttons">
+                    <h2 class="chosen-button" id="stats-button" >Stats</h2>
+                    <h2 id="about-button">About</h2>
+                </div>
+                <div id="current-info"></div>
+            </div>
+        </div>
+        <button id="reset-button" class="load-button d-none" onclick="resetFilter()">Reset</button>
+        <button id="load-button" class="load-button" onclick="loadMore()">Load more</button>
+    </main>
+    <div id="loading" class="loading d-none">
+        <p>Loading...</p>
+        <img src="./img/Pokeball.png" alt="">
+    </div>
+</body>
+<script src="script.js"></script>
+</html>

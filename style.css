@@ -1,0 +1,568 @@
+body{
+    font-family: "Yuji Mai", serif;
+    margin: 0;
+}/*
+h1{}
+h2{}*/
+h3{
+    margin: 0;
+}
+header{
+    padding-left: 100px;
+    padding-right: 100px;
+    background-color: aquamarine;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header img{
+    width: 100px;
+}
+header input{
+    font-size: 20px;
+    font-family: "Yuji Mai", serif;
+    text-align: center;
+    height: 50px;
+    flex: 1;
+}
+header button{
+    font-size: 20px;
+    font-family: "Yuji Mai", serif;
+    flex: 1;
+    height: 55px;
+    width: 100px;
+}
+main{
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #5f8478;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.my-main{
+    height: 100vh;
+}
+.load-button{
+    font-family: "Yuji Mai", serif;
+    cursor: pointer;
+    width:300px;
+    height: 50px;
+    border-radius: 10px;
+    border: none;
+    background-color: green;
+    font-size: 25px;
+    color: aliceblue;
+    margin-bottom: 20px;
+}
+.background-big-container{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: fixed;
+}
+.pokemon-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.single-small-container{
+    cursor: pointer;
+    width: 300px;
+    aspect-ratio: 1/1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    margin: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-around;
+}
+.single-small-container img{
+    width: 180px;
+    aspect-ratio: 1/1;
+    /*
+    padding-right: 15px;*/
+}
+.name-container{
+    display: flex;
+    justify-content: space-between;
+}
+.small-info-container{
+    display: flex;
+    justify-content: space-between;
+}
+.info-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.all-single-container{
+    display: flex;
+    flex-direction: column;
+}
+.single-info{
+    width: 90px;
+    background-color: aqua;
+    text-align: center;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 10px;
+}
+.big-container{
+    border-radius: 15px;
+    width: 50%;
+    top: 5%;
+    left: 25%;
+    position: fixed;
+    padding-bottom: 15px;
+}
+.single-header{
+    display: flex;
+    flex-direction: column;
+}
+.container-header{
+    display: flex;
+    justify-content: space-around;
+}
+.header-image{
+    display: flex;
+    justify-content: center;
+}
+.info-div{
+    display: flex;
+    column-gap: 3px;
+}
+.poke-image{
+    width: 45%;
+    aspect-ratio: 1/1;
+}
+.buttons{
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.buttons h2{
+    cursor: pointer;
+}
+.d-none{
+    display: none !important;
+}
+.cross-container{
+    display: flex;
+    justify-content: end;
+    padding: 15px;
+    padding-right: 35px;
+}
+.cross-container img{
+    width: 20px;
+    background-color: white;
+    padding: 8px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.arrow-container{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+.arrow-container img{
+    width: 25px;
+    background-color: white;
+    padding: 5px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.right-arrow{
+    transform: rotate(180deg);
+}
+.overflow-hid{
+    overflow: hidden;
+}
+
+.chosen-button{
+    padding: 5px;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0,0.25);
+}
+
+
+
+/*color classes*/
+.grass-container{
+    background-color: rgb(102, 204, 153);
+}
+.fire-container{
+    background-color: rgb(231, 76, 60);
+}
+.water-container{
+    background-color: rgb(3, 138, 255);
+}
+.bug-container{
+    background-color: rgb(166, 145, 92);
+}
+.normal-container{
+    background-color: rgb(189, 195, 199);
+}
+.poison-container{
+    background-color: rgb(191, 85, 236);
+}
+.electric-container{
+    background-color: rgb(255, 252, 127);
+}
+.ground-container{
+    background-color: rgb(130, 94, 92);
+}
+.fairy-container{
+    background-color: rgb(241, 130, 141);
+}
+.fighting-container{
+    background-color: rgb(255, 148, 120);
+}
+.psychic-container{
+    background-color: rgb(227, 61, 148);
+}
+.rock-container{
+    background-color: rgb(191, 191, 191);
+}
+.ghost-container{
+    background-color: rgb(102, 51, 153);
+}
+.flying-container{
+    background-color: rgb(197, 239, 247);
+}
+.ice-container{
+    background-color: rgb(137, 196, 244);
+}
+.dragon-container{
+    background-color: rgb(37, 116, 169);
+}
+.dark-container{
+    background-color: rgb(102, 51, 153);
+}
+.steel-container{
+    background-color: rgb(92, 151, 191);
+}
+
+.loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 40px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+}
+.loading img{
+    width: 90px;
+    animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg); 
+    }
+    100% {
+        transform: rotate(360deg); 
+    }
+}
+
+
+@media(max-width:860px){
+    h1{
+        font-size: 48px;
+    }
+    h2{
+        font-size: 45px;
+    }
+    h3{
+        font-size: 32px;
+    }
+    header{
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+    .single-small-container{
+        width: 550px;
+        aspect-ratio: 2/1.5;
+    }
+    .single-small-container img{
+        width: 250px;
+        padding-right: 20px;
+    }
+    .single-info{
+        width: 200px;
+    }
+    .big-container{
+        width: 70%;
+        left: 15%;
+        top: 20%;
+    }
+    .cross-container img{
+        width: 40px;
+        padding: 12px;
+        border-radius: 50px;
+    }
+    .arrow-container img{
+        width: 40px;
+        padding: 12px;
+        border-radius: 50px;
+    }
+    .info-div{
+        column-gap: 12px;
+    }
+    .poke-image{
+        width: 50%;
+    }
+}
+@media(max-width:760px){
+    .big-container h2{
+        font-size: 40px;
+    }
+    .big-container h3{
+        font-size: 26px;
+    }
+    .cross-container img{
+        width: 35px;
+        padding: 9px;
+        border-radius: 50px;
+    }
+    .arrow-container img{
+        width: 35px;
+        padding: 9px;
+        border-radius: 50px;
+    }
+}
+@media(max-width: 710px){
+    h2{
+        font-size: 42px;
+    }
+    h3{
+        font-size: 30px;
+    }
+    header{
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    header div{
+        display: flex;
+        flex-direction: column;
+    }
+    header input{
+        width: 98%;
+        height: 40px;
+    }
+    header button{
+        width: 100%;
+    }
+    .single-small-container{
+        width: 500px;
+        aspect-ratio: 2/1.5;
+    }
+    .single-small-container img{
+        width: 200px;
+        padding-right: 20px;
+    }
+}
+@media(max-width: 660px){
+    h2{
+        font-size: 40px;
+    }
+    h3{
+        font-size: 28px;
+    }
+    header img{
+        width: 90px;
+        height: 90px;
+    }
+    
+    .single-small-container{
+        width: 500px;
+        aspect-ratio: 2/1.5;
+    }
+    .single-small-container img{
+        width: 190px;
+        padding-right: 15px;
+    }
+    .single-info{
+        width: 140px;
+    }
+}
+@media(max-width:620px){
+    .big-container h1{
+        font-size: 42px;
+    }
+    .big-container h2{
+        font-size: 36px;
+    }
+    .big-container h3{
+        font-size: 22px;
+    }
+    .cross-container img{
+        width: 30px;
+        padding: 9px;
+        border-radius: 50px;
+    }
+    .arrow-container img{
+        width: 30px;
+        padding: 9px;
+        border-radius: 50px;
+    }
+}
+@media(max-width: 540px){
+    h2{
+        font-size: 38px;
+    }
+    h3{
+        font-size: 26px;
+    }
+    header div{
+        width: 250px;
+    }
+    .single-small-container{
+        width: 500px;
+        aspect-ratio: 2/1.5;
+    }
+    .single-small-container img{
+        width: 170px;
+        padding-right: 5px;
+    }
+    .single-info{
+        width: 120px;
+    }
+}
+@media(max-width: 510px){
+    .big-container{
+        width: 90%;
+        left: 5%;
+    }
+    .big-container h1{
+        font-size: 38px;
+    }
+    .big-container h2{
+        font-size: 32px;
+    }
+    .big-container h3{
+        font-size: 21px;
+    }
+    header input{
+        width: 97%;
+        height: 40px;
+    }
+    .cross-container img{
+        width: 35px;
+        padding: 9px;
+        border-radius: 50px;
+    }
+    .arrow-container img{
+        width: 35px;
+        padding: 9px;
+        border-radius: 50px;
+    }
+    .info-div{
+        flex-wrap: wrap;
+        text-align: end;
+    }
+}
+@media(max-width: 480px){
+    header input{
+        font-size: 18px;
+    }
+    h2{
+        font-size: 32px;
+    }
+    h3{
+        font-size: 20px;
+    }
+    header{
+        padding-left: 35px;
+        padding-right: 35px;
+    }
+    header div{
+        width: 200px;
+    }
+    header img{
+        width: 70px;
+        height: 70px;
+    }
+    .single-small-container img{
+        width: 150px;
+        padding-right: 5px;
+    }
+    .single-info{
+        width: 100px;
+    }
+}
+@media(max-width: 400px){
+    h2{
+        font-size: 30px;
+    }
+    h3{
+        font-size: 18px;
+    }
+    header input{
+        font-size: 15px;
+    }
+    header div{
+        width: 170px;
+    }
+    .single-small-container img{
+        width: 150px;
+        padding-right: 5px;
+    }
+    .single-info{
+        width: 80px;
+    }
+}
+
+@media(max-width: 380px){
+    .load-button{
+        width: 275px;
+    }
+    .big-container h1{
+        font-size: 34px;
+    }
+    .big-container h2{
+        font-size: 28px;
+    }
+    .big-container h3{
+        font-size: 17px;
+    }
+    .cross-container{
+        padding-right: 20px;
+    }
+    .cross-container img{
+        width: 25px;
+        padding: 9px;
+        border-radius: 50px;
+    }
+    .arrow-container img{
+        width: 25px;
+        padding: 9px;
+        border-radius: 50px;
+    }
+    h2{
+        font-size: 26px;
+    }
+    header img{
+        width: 60px;
+        height: 60px;
+    }
+    header{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .single-small-container img{
+        width: 120px;
+    }
+}
